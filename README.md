@@ -1,2 +1,2 @@
 # VolaGUI
-An user interface for the volatility framework.
+**[WIP]** A Graphical User Interface for the Volatility framework
