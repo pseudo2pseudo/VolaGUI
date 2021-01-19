@@ -31,7 +31,7 @@ def imageInfo_click(self):
     with open("imageinfo", "w") as file:
         proc = []
         proc.append(subprocess.Popen(
-            ['/opt/volatility_2.6_lin64_standalone','-f','Dump.mem','imageinfo'],
+            ['./volatility_2.6_lin64_standalone','-f','Dump.mem','imageinfo'],
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             universal_newlines=True,
