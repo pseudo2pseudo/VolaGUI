@@ -5,7 +5,7 @@
 
 1. Clone the repository with git
 2. Download **Volatility 2.6 for Linux** in the same folder as the repository https://www.volatilityfoundation.org/26
-3. Launch app in terminal with command **python volagui.py**
+3. Launch app in terminal with command **python** or **python3 volagui.py**
 
 **Features**
 1. General
