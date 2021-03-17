@@ -31,7 +31,7 @@ def imageInfo_click(self):
     with open("imageinfo", "w") as file:
         proc = []
         proc.append(subprocess.Popen(
-            ['./volatility_2.6_lin64_standalone','-f',path,'imageinfo'],
+            ['sudo','./volatility_2.6_lin64_standalone','-f',path,'imageinfo'],
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             universal_newlines=True,
@@ -57,7 +57,7 @@ def start_click(self):
     with open("psxview", "w") as file:
         proc = []
         proc.append(subprocess.Popen(
-            ['./volatility_2.6_lin64_standalone','-f',path,profile,'psxview'],
+            ['sudo','./volatility_2.6_lin64_standalone','-f',path,profile,'psxview'],
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             universal_newlines=True,
@@ -68,7 +68,7 @@ def start_click(self):
     with open("pstree", "w") as file:
         proc = []
         proc.append(subprocess.Popen(
-            ['./volatility_2.6_lin64_standalone','-f',path,profile,'pstree'],
+            ['sudo','./volatility_2.6_lin64_standalone','-f',path,profile,'pstree'],
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             universal_newlines=True,
@@ -97,7 +97,7 @@ def connscan_click(self):
     with open("connscan", "w") as file:
         proc = []
         proc.append(subprocess.Popen(
-            ['./volatility_2.6_lin64_standalone','-f',path,profile,'connscan'],
+            ['sudo','./volatility_2.6_lin64_standalone','-f',path,profile,'connscan'],
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             universal_newlines=True,
@@ -127,7 +127,7 @@ def dlllist_click(self):
     with open("dlllist", "w") as file:
         proc = []
         proc.append(subprocess.Popen(
-            ['./volatility_2.6_lin64_standalone','-f',path,profile,'dlllist','-p',pid],
+            ['sudo','./volatility_2.6_lin64_standalone','-f',path,profile,'dlllist','-p',pid],
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             universal_newlines=True,
@@ -156,7 +156,7 @@ def dumpd_click(self):
         return
     proc = []
     proc.append(subprocess.Popen(
-        ['./volatility_2.6_lin64_standalone','-f',path,profile,'dumpregistry -D',pathDump],
+        ['sudo','./volatility_2.6_lin64_standalone','-f',path,profile,'dumpregistry -D',pathDump],
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         universal_newlines=True,
@@ -184,7 +184,7 @@ def dumpp_click(self):
         return
     proc = []
     proc.append(subprocess.Popen(
-        ['./volatility_2.6_lin64_standalone','-f',path,profile,'procdump -D',pathDump,'-p',pid],
+        ['sudo','./volatility_2.6_lin64_standalone','-f',path,profile,'procdump -D',pathDump,'-p',pid],
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         universal_newlines=True,
@@ -209,7 +209,7 @@ def execute_click(self):
     with open("advanced", "w") as file:
         proc = []
         proc.append(subprocess.Popen(
-            ['./volatility_2.6_lin64_standalone','-f',path,profile,command],
+            ['sudo','./volatility_2.6_lin64_standalone','-f',path,profile,command],
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             universal_newlines=True,
@@ -235,7 +235,7 @@ def netscan_click(self):
     with open("netscan", "w") as file:
         proc = []
         proc.append(subprocess.Popen(
-            ['./volatility_2.6_lin64_standalone','-f',path,profile,'netscan'],
+            ['sudo','./volatility_2.6_lin64_standalone','-f',path,profile,'netscan'],
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             universal_newlines=True,
@@ -250,12 +250,12 @@ def netscan_click(self):
 
 def openVirusTotald_click(self):
     url = 'https://virustotal.com/gui/'
-    webbrowser.get(using='firefox').open(url, new=0)
+    webbrowser.open(url)
     sys.stdout.flush()
 
 def openVirusTotalp_click(self):
     url = 'https://virustotal.com/gui/'
-    webbrowser.get(using='firefox').open(url, new=0)
+    webbrowser.open(url)
     sys.stdout.flush()
 
 def sockets_click(self):
@@ -271,7 +271,7 @@ def sockets_click(self):
     with open("sockets", "w") as file:
         proc = []
         proc.append(subprocess.Popen(
-            ['./volatility_2.6_lin64_standalone','-f',path,profile,'sockets'],
+            ['sudo','./volatility_2.6_lin64_standalone','-f',path,profile,'sockets'],
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             universal_newlines=True,
