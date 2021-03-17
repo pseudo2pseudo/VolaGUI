@@ -344,7 +344,7 @@ class VolaGUI:
 
         self.Label1 = tk.Label(self.Tabs_advanced_1)
         self.Label1.place(relx=0.016, rely=0.03, height=21, width=300)
-        self.Label1.configure(text='''$ volatility -f dump.mem  --profile=profile''')
+        self.Label1.configure(text='''$ volatility -f dump.mem ''')
 
         self.TECommand = tk.Entry(self.Tabs_advanced_1)
         self.TECommand.place(relx=0.393, rely=0.026, height=23, relwidth=0.571)
